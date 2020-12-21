@@ -25,9 +25,9 @@ Pod::Spec.new do |s|
   s.public_header_files = 'EaseIMKit/**/PublicHeaders/*.h'
   
   s.xcconfig = {
-    # 因为支持ios11以上，所以不需要armv7，i386指令集
+    'ARCHS' => ['arm64, x86_64'],
 #    'VALID_ARCHS' => ['arm64, x86_64'],
-    'EXCLUDED_ARCHS' => ['arm64, x86_64'],
+#    'EXCLUDED_ARCHS' => ['arm64, x86_64'],
     'OTHER_LDFLAGS' => '-ObjC'
   }
 
@@ -40,11 +40,19 @@ Pod::Spec.new do |s|
    s.libraries = 'stdc++'
    
    s.dependency 'Hyphenate'
-   s.dependency 'EMVoiceConvert'
+   
 
    s.dependency 'SDWebImage'
    s.dependency 'Masonry'
 #   s.dependency 'FLAnimatedImage'
 #   s.dependency 'MBProgressHUD'
+
+  s.subspec 'VoiceConvert' do |v|
+    v.dependency 'EMVoiceConvert'
+    v.xcconfig = {
+      'EXCLUDED_ARCHS' => ['arm64, x86_64'],
+      'OTHER_LDFLAGS' => '-ObjC'
+    }
+  end
      
 end
