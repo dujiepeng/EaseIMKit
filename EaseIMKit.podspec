@@ -26,7 +26,8 @@ Pod::Spec.new do |s|
   
   s.xcconfig = {
     # 因为支持ios11以上，所以不需要armv7，i386指令集
-    'VALID_ARCHS' => ['arm64, x86_64'],
+#    'VALID_ARCHS' => ['arm64, x86_64'],
+    'EXCLUDED_ARCHS' => ['arm64, x86_64'],
     'OTHER_LDFLAGS' => '-ObjC'
   }
 
@@ -43,7 +44,7 @@ Pod::Spec.new do |s|
 
    s.dependency 'SDWebImage'
    s.dependency 'Masonry'
-   s.dependency 'FLAnimatedImage'
-   s.dependency 'MBProgressHUD'
+#   s.dependency 'FLAnimatedImage'
+#   s.dependency 'MBProgressHUD'
      
 end
