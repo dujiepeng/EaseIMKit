@@ -1,6 +1,0 @@
-use_frameworks!
-target 'EaseIMKit_Tests' do
-  pod 'EaseIMKit', :path => '../'
-  
-  
-end

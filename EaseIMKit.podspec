@@ -9,34 +9,41 @@
 Pod::Spec.new do |s|
   s.name             = 'EaseIMKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of EaseIMKit.'
+  s.summary          = 'easemob im sdk UIKit'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'easemob sdk ui kit'
 
   s.homepage         = 'https://github.com/dujiepeng/EaseIMKit'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license = 'MIT'
   s.author           = { 'dujiepeng' => '347302029@qq.com' }
-  s.source           = { :git => 'https://github.com/dujiepeng/EaseIMKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/dujiepeng/EaseIMKit.git', :branch => 'test' }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '11.0'
 
-  s.source_files = 'EaseIMKit/Classes/**/*'
+  s.source_files = 'EaseIMKit/Classes/**/*.{h,m,mm}'
   
-  # s.resource_bundles = {
-  #   'EaseIMKit' => ['EaseIMKit/Assets/*.png']
-  # }
+  s.public_header_files = 'EaseIMKit/**/PublicHeaders/*.h'
+  
+  s.xcconfig = {
+    # 因为支持ios11以上，所以不需要armv7，i386指令集
+    'VALID_ARCHS' => ['arm64, x86_64'],
+    'OTHER_LDFLAGS' => '-ObjC'
+  }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
+   s.resource_bundles = {
+     'EaseIMKit' => ['EaseIMKit/Assets/**/*.{png,jpeg,gif,jpg}']
+   }
+   
+   s.frameworks = 'UIKit'
+   s.libraries = 'stdc++'
+   
+   s.dependency 'Hyphenate'
+   s.dependency 'EMVoiceConvert'
+
+   s.dependency 'SDWebImage'
+   s.dependency 'Masonry'
+   s.dependency 'FLAnimatedImage'
+   s.dependency 'MBProgressHUD'
+     
 end
