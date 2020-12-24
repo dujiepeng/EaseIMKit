@@ -13,16 +13,16 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'EaseIMKit'
-  s.version          = '0.1.0'
-  s.summary          = 'easemob im sdk UIKit'
+  s.name = 'EaseIMKit'
+  s.version = '0.1.0'
+  s.summary = 'easemob im sdk UIKit'
 
-  s.description      = 'easemob sdk ui kit'
+  s.description = 'easemob sdk ui kit'
 
-  s.homepage         = 'https://github.com/dujiepeng/EaseIMKit'
+  s.homepage = 'https://github.com/dujiepeng/EaseIMKit'
   s.license = 'MIT'
-  s.author           = { 'dujiepeng' => '347302029@qq.com' }
-  s.source           = { :git => 'https://github.com/MThrone/EaseIMKit.git', :branch => 'packageTest' }
+  s.author = { 'dujiepeng' => '347302029@qq.com' }
+  s.source = { :git => 'https://github.com/MThrone/EaseIMKit.git', :branch => 'packageTest' }
 
   s.ios.deployment_target = '11.0'
 
