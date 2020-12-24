@@ -31,7 +31,6 @@ Pod::Spec.new do |s|
   s.public_header_files = 'EaseIMKit/**/PublicHeaders/*.h'
 
   s.xcconfig = {
-    'VALID_ARCHS' => '',
     'EXCLUDED_ARCHS' => 'armv7, armv7s, i386',
     'OTHER_LDFLAGS' => '-ObjC'
   }
@@ -42,9 +41,6 @@ Pod::Spec.new do |s|
 
    s.frameworks = 'UIKit'
    s.libraries = 'stdc++'
-
-   #s.dependency 'Hyphenate'
-   s.dependency 'EMVoiceConvert', '~> 0.1.0'
 
 end
 
