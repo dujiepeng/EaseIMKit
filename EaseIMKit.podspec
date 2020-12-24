@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/dujiepeng/EaseIMKit'
   s.license = 'MIT'
   s.author           = { 'dujiepeng' => '347302029@qq.com' }
-  s.source           = { :git => 'https://github.com/dujiepeng/EaseIMKit.git', :branch => 'test' }
+  s.source           = { :git => 'https://github.com/MThrone/EaseIMKit.git', :branch => 'packageTest' }
 
   s.ios.deployment_target = '11.0'
 
@@ -43,7 +43,8 @@ Pod::Spec.new do |s|
    s.frameworks = 'UIKit'
    s.libraries = 'stdc++'
 
-   s.dependency 'Hyphenate'
-   s.dependency 'EMVoiceConvert', '~> 0.0.8'
+   #s.dependency 'Hyphenate'
+   s.dependency 'EMVoiceConvert', '~> 0.1.0'
 
 end
+
